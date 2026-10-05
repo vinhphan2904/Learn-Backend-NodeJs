@@ -1,0 +1,30 @@
+{
+  "name": "backend-server",
+  "version": "1.0.0",
+  "description": "Learn NodeJs",
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "homepage": "https://github.com/vinhphan2904/Learn-Backend-NodeJs#readme",
+  "bugs": {
+    "url": "https://github.com/vinhphan2904/Learn-Backend-NodeJs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinhphan2904/Learn-Backend-NodeJs.git"
+  },
+  "license": "ISC",
+  "author": "Vinh Phan",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
+    "express": "4.18.2"
+  }
+}

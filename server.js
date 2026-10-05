@@ -1,14 +1,20 @@
-const { createServer } = require("node:http");
+const express = require("express");
+const path = require("path")
+require("dotenv").config();
+const app = express();
+const port = process.env.PORT || 8888;
+const hostname = process.env.HOSTNAME
+app.set("views", "./views");
+app.set("view engine", "ejs");
 
-const hostname = "localhost";
-const port = 3000;
-
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World");
+app.get("/abc", (req, res) => {
+  res.send("Hello World!");
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.get("/", (req, res) => {
+  res.render("example");
+});
+
+app.listen(port,hostname, () => {
+  console.log(`Example app listening on port ${port}`);
 });
